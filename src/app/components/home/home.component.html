@@ -1,0 +1,112 @@
+<section class="home-top">
+  <div class="top-parent">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <ng-container *ngFor="let banner of banners; let i = index">
+          <div class="carousel-item" [ngClass]="i === 0 ? 'active' : ''" data-bs-interval="4000">
+            <img [src]="banner" class="d-block w-100" alt="banner" />
+          </div>
+        </ng-container>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-9">
+          <div class="top-card">
+            <div class="left-side">
+              <h2>Welcome to
+                spearhead international</h2>
+              <p>Spearhead International is located in 3b2, Mohali Chandigarh. It is the best IELTS coaching Institute
+                in
+                Mohali which also helps students with Study visas and Permanent Residency Consulting. Spearhead
+                International is the one and only IELTS Coaching institute in Mohali, Chandigarh, India With a very high
+                success rate in Achieving desired band scores.</p>
+            </div>
+            <div class="right-side">
+              <ul>
+                <li><img src="assets/images/icon1.png" alt="">
+                  <h4>Free IELTS tests</h4>
+                </li>
+                <li><img src="assets/images/icon2.png" alt="">
+                  <h4>Free Mock analysis</h4>
+                </li>
+                <li><img src="assets/images/icon3.png" alt="">
+                  <h4>IELTS counseling</h4>
+                </li>
+                <li><img src="assets/images/icon4.png" alt="">
+                  <h4>Study Visa Consulting</h4>
+                </li>
+                <li><img src="assets/images/icon3.png" alt="">
+                  <h4>PR Profile Analysis</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="best-college">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="content">
+          <h2>BEST COLLEGES AND UNIVERSITIES</h2>
+          <p>
+            We always recommend best colleges and universities for IELTS cleared
+            students. Which will help them to make their carreer in their selected
+            countries. Some of the colleges & Universities are given below.
+          </p>
+          <button class="btn custom-btn">More Colleges</button>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="blogs">
+  <div class="container">
+    <div class="row">
+      <div class="heading">
+        <h1>Latest Blogs</h1>
+      </div>
+    </div>
+    <div class="row">
+      <ng-container *ngFor="let blog of blogs">
+        <div class="col-md-4">
+          <div class="blog my-5">
+            <div class="blog-img">
+              <img [src]="blog.img" alt="">
+            </div>
+            <div class="blog-content">
+              <h4>{{blog.title}}</h4>
+              <div class="para">
+                <p>{{blog.description}}</p>
+              </div>
+              <div class="blog-bottom">
+                <button class="btn blog-btn">Read More</button>
+                <p>{{blog.author}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

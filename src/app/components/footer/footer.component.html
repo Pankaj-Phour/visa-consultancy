@@ -1,0 +1,79 @@
+<section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer-content">
+          <h4>About</h4>
+          <p>
+            Spearhead International is located in 3b2, Mohali Chandigarh. It is
+            the best IELTS coaching Institute in Mohali which also helps
+            students with Study visas and Permanent Residency Consulting.
+            Spearhead International is the one and only IELTS Coaching institute
+            in Mohali, Chandigarh, India With a very high success rate in
+            Achieving desired band scores.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="footer-content">
+          <h4>Study Abroad</h4>
+          <ul>
+            <ng-container *ngFor="let footerLink of footerLinks">
+              <li [routerLink]="[footerLink.link]">
+                <p>{{ footerLink.title }}</p>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-content">
+          <h4>Contact Us - Mohali</h4>
+          <p>
+            <span class="me-3"><i class="fa fa-map-marker"></i></span>SCF 71,
+            2nd Floor, Phase 3B2, Sector 60, Sahibzada Ajit Singh Nagar, Punjab
+            160059
+          </p>
+          <p>
+            <span class="me-3"><i class="fa fa-phone"></i></span>+91 77106-17777
+          </p>
+          <p>
+            <span class="me-3"><i class="fa fa-envelope"></i></span
+            >india@spearheadeducation.com
+          </p>
+        </div>
+        <div class="footer-content">
+          <h4>Contact Us - Rajpura</h4>
+          <p>
+            <span class="me-3"><i class="fa fa-map-marker"></i></span>No 9-10 D
+            Basement, G.S. Tower, Caliber Market, Rajpura - Patiala Rd, Rajpura,
+            Punjab 140401
+          </p>
+          <p>
+            <span class="me-3"><i class="fa fa-phone"></i></span>+91 75199-99915
+          </p>
+          <p>
+            <span class="me-3"><i class="fa fa-phone"></i></span>+91 62837-27313
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-content">
+          <h4>Contact Us - Jammu</h4>
+          <p>
+            <span class="me-3"><i class="fa fa-map-marker"></i></span>48 D/C,
+            opposite Salon Sprit, Gandhi Nagar, Jammu Cantonment, Jammu and
+            Kashmir 180004
+          </p>
+          <p>
+            <span class="me-3"><i class="fa fa-phone"></i></span>+91 91498-41696
+          </p>
+          <p>
+            <span class="me-3"><i class="fa fa-envelope"></i></span
+            >contact@spearheadeducation.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
