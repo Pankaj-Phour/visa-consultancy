@@ -49,7 +49,7 @@ formValidation(){
       window.open(`tel:+91 8901089381`,"_blank")
     }
     else if(index == 1){
-      window.open("mailTo:sahilgautam981366@gmail.com","_blank")
+      window.open("mailTo:sahilgautam311098@gmail.com","_blank")
     }
     else if(index == 2){
       window.open("http://wa.me/918901089381","_blank")
