@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,7 @@ export class HeaderComponent implements OnInit {
       link: '/about-us'
     },
     {
-      title: 'IELTS',
+      title: 'IELTS/PTE',
       link: ''
     },
     {
@@ -29,22 +30,22 @@ export class HeaderComponent implements OnInit {
       title: 'Study Material',
       link: ''
     },
-    {
-      title: 'Awards',
-      link: ''
-    },
-    {
-      title: 'Achievements',
-      link: ''
-    },
+    // {
+    //   title: 'Awards',
+    //   link: ''
+    // },
+    // {
+    //   title: 'Achievements',
+    //   link: ''
+    // },
     {
       title: 'News',
       link: ''
     },
-    {
-      title: 'Franchise',
-      link: ''
-    },
+    // {
+    //   title: 'Franchise',
+    //   link: ''
+    // },
     {
       title: 'Blogs',
       link: ''
@@ -59,7 +60,11 @@ export class HeaderComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  studyLinks: any
+
+  constructor(private api: ApiService) {
+    this.studyLinks = this.api.footerLinks
+  }
 
   ngOnInit(): void {
   }

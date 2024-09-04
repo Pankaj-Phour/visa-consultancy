@@ -1,3 +1,4 @@
+import { CollegeListComponent } from './components/college-list/college-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'about-us',
     component: AboutComponent
+  },
+  {
+    path: 'colleges',
+    component: CollegeListComponent
   },
   {
     path: 'contact-us',

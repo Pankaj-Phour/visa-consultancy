@@ -1,15 +1,59 @@
+<nav class="navbar navbar-expand-lg top-navbar">
+  <div class="container">
+    <a class="navbar-brand txt" style="flex: 1" href="#">Welcome to Visa Guru Immigration</a>
+    <ul class="navbar-nav navbar-nav-top me-auto mb-2 mb-lg-0">
+      <li>
+        <i class="fa fa-phone icon"></i>
+        <a href="tel:+918901089381" class="txt"> +91 8901089381 </a>
+      </li>
+      <li>
+        <i class="fa fa-envelope icon"></i>
+        <a href="mailto:info@spearheadeducation.com" class="txt">contact@visaguruimmigration.com</a>
+      </li>
+      <li>
+        <ul class="social">
+          <li>
+            <a href="" class="txt"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="" class="txt"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="" class="txt"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="logo-section">
+      <div class="logo-area">
+        <img src="assets/images/mainLogo.jpeg" alt="" />
+      </div>
+      <div class="enquiry-area">
+        <ul>
+          <li>
+            <i></i>
+            <p>BAND CALCULATOR</p>
+          </li>
+          <li>
+            <i></i>
+            <p>REQUEST A CALL BACK</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <nav class="navbar navbar-expand-lg">
-  <div class="container navParent" >
+  <div class="container">
     <!-- <a class="navbar-brand" routerLink="/">Navbar</a> -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -17,9 +61,37 @@
         <ng-container *ngFor="let link of links; let i = index">
           <ng-container *ngIf="i !== links.length - 1">
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="[link.link]">{{
-                link.title
-              }}</a>
+              <a class="nav-link" [routerLink]="[link.link]" *ngIf="i < 1 || i >3">{{link.title}}</a>
+
+              <div class="dropdown" *ngIf="i == 1 || i == 2 || i ==3">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  {{link.title}}
+                </a>
+
+                <ul class="dropdown-menu" *ngIf="i == 1">
+                  <li><a class="dropdown-item">Why us - for IELTS</a></li>
+                  <li><a class="dropdown-item">Why us - for Study Visa</a></li>
+                  <li><a class="dropdown-item">Why us - for PR</a></li>
+                  <li><a class="dropdown-item" routerLink="/colleges">Best College/University List</a></li>
+                </ul>
+
+                <ul class="dropdown-menu" *ngIf="i == 2">
+                  <li><a class="dropdown-item">Tips And Tricks</a></li>
+                  <li><a class="dropdown-item">Free Demo</a></li>
+                  <li><a class="dropdown-item">Free Mock Test</a></li>
+                  <li><a class="dropdown-item">Online Coaching</a></li>
+                  <li><a class="dropdown-item">Single Module Training</a></li>
+                  <li><a class="dropdown-item">Buy Practice Material</a></li>
+                  <li><a class="dropdown-item">Book IELTS Test</a></li>
+                </ul>
+
+                <ul class="dropdown-menu" *ngIf="i == 3">
+                  <ng-container *ngFor="let studyLink of studyLinks">
+                    <li><a class="dropdown-item" [routerLink]="studyLink.title">{{studyLink.title}}</a></li>
+                  </ng-container>
+                </ul>
+              </div>
             </li>
           </ng-container>
 
