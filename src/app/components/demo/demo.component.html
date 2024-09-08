@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="heading">
-        <h1>Contact Us</h1>
+        <h1>Free Demo</h1>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
       <!-- <div class="col-md-1"></div> -->
       <div class="col-md-5">
         <div class="contact-form">
-          <form action="" [formGroup]="contactForm">
+          <form [formGroup]="demoForm">
             <div class="mb-4">
               <label for="name" class="form-label">Name</label>
               <input
@@ -54,17 +54,25 @@
               />
             </div>
             <div class="mb-4">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                name="message"
-                id="message"
-                placeholder="Message"
-                formControlName="query"
-              ></textarea>
+              <label for="select" class="form-label">Select Option</label>
+              <select
+                class="form-select"
+                id="select"
+                aria-label="Default select example"
+                formControlName="queryType"
+              >
+                <option selected disabled>Select Option</option>
+                <option value="Free Demo Booking">Free Demo Booking</option>
+                <option value="Free Mock Test">Free Mock Test</option>
+                <option value="Online Coaching">Online Coaching</option>
+                <option value="Single Module Training">
+                  Single Module Training
+                </option>
+                <option value="Buy IELTS Material">Buy IELTS Material</option>
+              </select>
             </div>
             <div class="submit">
-              <button class="btn btn-primary" (click)="submitContactForm()">
+              <button class="btn btn-primary" (click)="submitDemoForm()">
                 Submit
               </button>
             </div>

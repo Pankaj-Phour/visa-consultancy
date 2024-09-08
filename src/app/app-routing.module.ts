@@ -4,6 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { WhyUsComponent } from './components/why-us/why-us.component';
+import { DemoComponent } from './components/demo/demo.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { IeltsComponent } from './components/ielts/ielts.component';
 
 const routes: Routes = [
   {
@@ -16,6 +20,22 @@ const routes: Routes = [
   {
     path: 'about-us',
     component: AboutComponent
+  },
+  {
+    path: 'why-us',
+    component: WhyUsComponent
+  },
+  {
+    path: 'demo',
+    component: DemoComponent
+  },
+  {
+    path: 'ielts',
+    component: IeltsComponent
+  },
+  {
+    path: 'blogs',
+    component: BlogsComponent
   },
   {
     path: 'colleges',

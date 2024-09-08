@@ -21,3 +21,15 @@ body {
   text-transform: capitalize;
   transition: ease-in-out all 0.4s;
 }
+
+.title-section {
+  background-color: #2f2e41;
+  padding-block: 5rem;
+  .heading {
+    h1 {
+      color: white;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

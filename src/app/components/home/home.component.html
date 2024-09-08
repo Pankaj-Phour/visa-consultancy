@@ -124,7 +124,9 @@
               <div class="circle">
                 <img [src]="item.img" alt="" />
                 <div class="img_content">
-                  <h3 class="text-center">{{ item.title }}</h3>
+                  <h3 class="text-center">
+                    Why Visa Guru Immigration For {{ item.title }} ?
+                  </h3>
                 </div>
               </div>
             </div>
@@ -176,58 +178,64 @@
 </section>
 
 <section class="testimonial">
-  <div class="row mb-5">
-    <div class="section-heading">
-      <h1>What Clients Say</h1>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="section-heading">
+        <h1>What Clients Say</h1>
+      </div>
     </div>
-  </div>
-  <div id="testimonialCarousal" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <ng-container *ngFor="let testimonial of testimonials; let i = index">
-        <div
-          class="carousel-item"
-          [ngClass]="i === 0 ? 'active' : ''"
-          data-bs-interval="4000"
-        >
-          <!-- <img [src]="banner" class="d-block w-100" alt="banner" /> -->
-          <div class="container">
-            <div class="row">
-              <ng-container *ngFor="let item of testimonial">
-                <div class="col-md-4">
-                  <div class="testimonial">
-                    <div class="testimonial-image">
-                      <img [src]="item.img" alt="" />
-                    </div>
-                    <div class="testimonial-content">
-                      <h4>{{ item.title }}</h4>
-                      <p>{{ item.description }}</p>
+    <div
+      id="testimonialCarousal"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <ng-container *ngFor="let testimonial of testimonials; let i = index">
+          <div
+            class="carousel-item"
+            [ngClass]="i === 0 ? 'active' : ''"
+            data-bs-interval="4000"
+          >
+            <!-- <img [src]="banner" class="d-block w-100" alt="banner" /> -->
+            <div class="container">
+              <div class="row">
+                <ng-container *ngFor="let item of testimonial">
+                  <div class="col-md-4">
+                    <div class="testimonial-box">
+                      <div class="testimonial-image mb-3">
+                        <img [src]="item.img" alt="" />
+                      </div>
+                      <div class="testimonial-content">
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.description }}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </ng-container>
+                </ng-container>
+              </div>
             </div>
           </div>
-        </div>
-      </ng-container>
+        </ng-container>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#testimonialCarousal"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#testimonialCarousal"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#testimonialCarousal"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#testimonialCarousal"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 </section>
 
@@ -244,7 +252,9 @@
             selected countries. Some of the colleges & Universities are given
             below.
           </p>
-          <button class="btn custom-btn">More Colleges</button>
+          <button class="btn custom-btn" routerLink="/colleges">
+            More Colleges
+          </button>
         </div>
       </div>
       <div class="col-md-1"></div>

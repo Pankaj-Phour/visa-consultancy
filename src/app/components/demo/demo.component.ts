@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  selector: 'app-demo',
+  templateUrl: './demo.component.html',
+  styleUrls: ['./demo.component.scss']
 })
-export class ContactUsComponent implements OnInit {
+export class DemoComponent implements OnInit {
+  demoForm: FormGroup;
 
-  contactForm: FormGroup
   constructor(private fb: FormBuilder) {
     this.validation();
   }
@@ -17,17 +17,20 @@ export class ContactUsComponent implements OnInit {
   }
 
   validation() {
-    this.contactForm = this.fb.group({
+    this.demoForm = this.fb.group({
       name: ['', Validators.required],
       number: ['', Validators.required],
       email: ['', Validators.required],
-      query: ['', Validators.required],
+      queryType: ['', Validators.required],
     })
   }
 
-  submitContactForm() {
-    if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
+  submitDemoForm() {
+    console.log('hello');
+
+    if (this.demoForm.valid) {
+      console.log(this.demoForm.value);
+
     }
   }
 }

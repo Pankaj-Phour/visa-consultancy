@@ -1,61 +1,59 @@
 .heading {
-    padding-block: 5rem;
-
-    h1 {
-        margin: 0;
-        text-align: center;
-    }
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .college-list-container {
-    box-shadow: 0px 5px 10px 0px rgba(188, 188, 188, 0.25);
+  box-shadow: 0px 5px 10px 0px rgba(188, 188, 188, 0.25);
 }
 
 .search {
-    box-shadow: 0px 5px 10px 0px rgba(188, 188, 188, 0.25);
+  box-shadow: 0px 5px 10px 0px rgba(188, 188, 188, 0.25);
 
-    label {
-        margin-bottom: 0.5rem;
-    }
+  label {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .colleges {
-    ul {
-        padding: 0;
-        list-style: none;
+  ul {
+    padding: 0;
+    list-style: none;
 
-        li {
-            color: #333;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #8B0101;
-            border-radius: 0.25rem;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-        }
+    li {
+      color: #333;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #6c63ff;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
     }
+  }
 
-    ul li:hover {
-        color: rgba(255, 182, 6, 1) !important;
-    }
+  ul li:hover {
+    color: rgba(255, 182, 6, 1) !important;
+  }
 }
 
 .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
 }
 
 .table-bordered {
-    border: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
 }
 
 .table th,
 .table td {
-    padding: 0.75rem;
-    vertical-align: top;
+  padding: 0.75rem;
+  vertical-align: top;
 }
 
 .selected {
-    background-color: #8B0101;
-    color: #fff !important;
+  background-color: #6c63ff;
+  color: #fff !important;
 }

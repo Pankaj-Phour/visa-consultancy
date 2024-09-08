@@ -1,12 +1,16 @@
 .navbar {
   height: 50px;
-  background-color: #8b0101;
+  background-color: #6c63ff;
 }
 
 .navbar-nav {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+.bg {
+  background: black;
 }
 
 .nav-link {
@@ -32,7 +36,7 @@
 .top-navbar {
   height: 40px;
   color: #ffffff !important;
-  background-color: #555555;
+  background-color: #6c63ff;
 
   .navbar-nav-top {
     width: unset;
@@ -123,9 +127,12 @@
     li {
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       p {
         margin-bottom: 0;
+        color: #ffffff;
+        font-size: 15px;
       }
     }
   }
@@ -134,4 +141,5 @@
 .dropdown-toggle {
   background-color: transparent !important;
   color: white;
+  font-size: 15px;
 }

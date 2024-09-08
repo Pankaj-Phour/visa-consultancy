@@ -1,56 +1,78 @@
 <section class="title-section">
-    <div class="container">
-        <div class="row">
-            <div class="heading">
-                <h1>University & Colleges list</h1>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="heading">
+        <h1>University & Colleges list</h1>
+      </div>
     </div>
+  </div>
 </section>
 <section class="college-list">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="college-list-container py-5 px-3">
-                    <h3 class="text-center text-capitalize mb-4 mt-0">Study in {{selectedCountry}}</h3>
-                    <div class="college-table">
-                        <table class="table table-bordered table-striped" cellspacing="0" rules="all"
-                            style="border-collapse:collapse;">
-                            <tbody>
-                                <tr style="background-color: rgba(0, 0, 0, 0.05);" style *ngIf="colleges.length > 0">
-                                    <th scope="col">#</th>
-                                    <th scope="col">College Name</th>
-                                    <th scope="col">Apply</th>
-                                </tr>
-                                <tr *ngIf="colleges.length == 0">
-                                    <td colspan="3">Sorry no college available in your selected country.</td>
-                                </tr>
-                                <ng-container *ngFor="let college of colleges">
-                                    <tr style *ngIf="colleges.length > 0">
-                                        <td>{{college.id}}</td>
-                                        <td>{{college.name}}</td>
-                                        <td><button class="btn btn-danger">Apply</button></td>
-                                    </tr>
-                                </ng-container>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="search py-4 px-3 mb-4" [formGroup]="searchForm">
-                    <label for="myinput">Search</label>
-                    <input type="text" id="myinput" placeholder="Search" class="form-control" formControlName="search">
-                </div>
-                <div class="colleges">
-                    <ul>
-                        <ng-container *ngFor="let country of countryList">
-                            <li (click)="getColleges(country)"
-                                [ngClass]="selectedCountry === country ? 'selected' : ''">{{country}}</li>
-                        </ng-container>
-                    </ul>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="college-list-container py-5 px-3">
+          <h3 class="text-center text-capitalize mb-4 mt-0">
+            Study in {{ selectedCountry }}
+          </h3>
+          <div class="college-table">
+            <table
+              class="table table-bordered table-striped"
+              cellspacing="0"
+              rules="all"
+              style="border-collapse: collapse"
+            >
+              <tbody>
+                <tr
+                  style="background-color: rgba(0, 0, 0, 0.05)"
+                  style
+                  *ngIf="colleges.length > 0"
+                >
+                  <th scope="col">#</th>
+                  <th scope="col">College Name</th>
+                  <th scope="col">Apply</th>
+                </tr>
+                <tr *ngIf="colleges.length == 0">
+                  <td colspan="3">
+                    Sorry no college available in your selected country.
+                  </td>
+                </tr>
+                <ng-container *ngFor="let college of colleges">
+                  <tr style *ngIf="colleges.length > 0">
+                    <td>{{ college.id }}</td>
+                    <td>{{ college.name }}</td>
+                    <td><button class="btn btn-primary">Apply</button></td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="search py-4 px-3 mb-4" [formGroup]="searchForm">
+          <label for="myinput">Search</label>
+          <input
+            type="text"
+            id="myinput"
+            placeholder="Search"
+            class="form-control"
+            formControlName="search"
+          />
+        </div>
+        <div class="colleges">
+          <ul>
+            <ng-container *ngFor="let country of countryList">
+              <li
+                (click)="getColleges(country)"
+                [ngClass]="selectedCountry === country ? 'selected' : ''"
+              >
+                {{ country }}
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
