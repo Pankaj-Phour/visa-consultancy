@@ -270,11 +270,11 @@
       </div>
     </div>
     <div class="row">
-      <ng-container *ngFor="let blog of blogs">
+      <ng-container *ngFor="let blog of blogs;let i = index;">
         <div class="col-md-4">
           <div class="blog my-5">
             <div class="blog-img">
-              <img [src]="blog.img" alt="" />
+              <img [src]="pathways[i].img" alt="" />
             </div>
             <div class="blog-content">
               <h4>{{ blog.title }}</h4>
