@@ -1,0 +1,85 @@
+<section class="title-section">
+  <div class="container">
+    <div class="row">
+      <div class="heading">
+        <h1>Free Demo</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-us">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="img-container">
+          <img src="assets/images/demo.svg" alt="" />
+        </div>
+      </div>
+      <!-- <div class="col-md-1"></div> -->
+      <div class="col-md-5">
+        <div class="contact-form">
+          <form [formGroup]="demoForm">
+            <div class="mb-4">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Name"
+                formControlName="name"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="Phone" class="form-label">Phone</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Phone"
+                placeholder="Phone"
+                formControlName="number"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+                formControlName="email"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="select" class="form-label">Select Option</label>
+              <select
+                class="form-select"
+                id="select"
+                aria-label="Default select example"
+                formControlName="queryType"
+              >
+                <option selected disabled>Select Option</option>
+                <option value="Free Demo Booking">Free Demo Booking</option>
+                <option value="Free Mock Test">Free Mock Test</option>
+                <option value="Online Coaching">Online Coaching</option>
+                <option value="Single Module Training">
+                  Single Module Training
+                </option>
+                <option value="Buy IELTS Material">Buy IELTS Material</option>
+              </select>
+            </div>
+            <div class="submit">
+              <button class="btn btn-primary" (click)="submitDemoForm()">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</section>

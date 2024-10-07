@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.custom-btn {
+  padding: 5px 15px;
+  background-color: rgba(255, 182, 6, 1);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 15px;
+  text-transform: capitalize;
+  transition: ease-in-out all 0.4s;
+}
+
+.title-section {
+  background-color: #2f2e41;
+  padding-block: 5rem;
+  .heading {
+    h1 {
+      color: white;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}

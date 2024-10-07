@@ -1,0 +1,294 @@
+<section class="home-top">
+  <div class="top-parent">
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <ng-container *ngFor="let banner of banners; let i = index">
+          <div
+            class="carousel-item"
+            [ngClass]="i === 0 ? 'active' : ''"
+            data-bs-interval="4000"
+          >
+            <img [src]="banner" class="d-block w-100" alt="banner" />
+          </div>
+        </ng-container>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-9">
+          <div class="top-card">
+            <div class="left-side">
+              <h2>Welcome to Visa Guru Immigration</h2>
+              <p>
+                Visa Guru Immigration is your go-to online platform for PTE
+                training, visa counseling, and immigration services. We
+                specialize in helping clients with study visas, work visas, PR
+                pathways, and more. With our expert guidance and a very high
+                success rate, we ensure that you achieve your goals, whether
+                it’s studying abroad, securing a work visa, or obtaining
+                permanent residency.
+              </p>
+            </div>
+            <div class="right-side">
+              <ul>
+                <li>
+                  <img src="assets/images/icon1.png" alt="" />
+                  <h4>Free IELTS tests</h4>
+                </li>
+                <li>
+                  <img src="assets/images/icon2.png" alt="" />
+                  <h4>Free Mock analysis</h4>
+                </li>
+                <li>
+                  <img src="assets/images/icon3.png" alt="" />
+                  <h4>IELTS counseling</h4>
+                </li>
+                <li>
+                  <img src="assets/images/icon4.png" alt="" />
+                  <h4>Study Visa Consulting</h4>
+                </li>
+                <li>
+                  <img src="assets/images/icon3.png" alt="" />
+                  <h4>PR Profile Analysis</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="container-fluid">
+    <div class="row mb-5">
+      <div class="section-heading">
+        <h1>Why Us - For IELTS ?</h1>
+      </div>
+    </div>
+    <div class="row whyUsb-box-container">
+      <ng-container *ngFor="let item of whyUs; let i = index">
+        <div class="col-md-3">
+          <div
+            class="whyUs-box"
+            [ngStyle]="{ 'border-right': i < 3 ? '1px solid white' : '' }"
+          >
+            <img [src]="item.img" />
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<ng-container *ngFor="let item of whyUsDetails; let i = index">
+  <section
+    class="why-us-details"
+    [ngStyle]="{ 'background-color': i === 1 ? '#dfdfdf' : '' }"
+  >
+    <div class="container">
+      <div class="details-container">
+        <div class="row">
+          <div
+            class="col-md-5"
+            [ngClass]="(i + 2) % 2 == 0 ? 'order-first' : 'order-last'"
+          >
+            <div class="circle-container">
+              <div class="circle">
+                <img [src]="item.img" alt="" />
+                <div class="img_content">
+                  <h3 class="text-center">
+                    Why Visa Guru Immigration For {{ item.title }} ?
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="points-container">
+              <ul>
+                <ng-container *ngFor="let point of item.points">
+                  <li>{{ point }}</li>
+                </ng-container>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
+
+<section class="blogs">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="section-heading">
+        <h1>Pathway to Australia PR Courses</h1>
+      </div>
+    </div>
+    <div class="row">
+      <ng-container *ngFor="let pathway of pathways">
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-4">
+          <div class="blog my-5">
+            <div class="blog-img">
+              <img [src]="pathway.img" alt="" />
+            </div>
+            <div class="blog-content top-blog">
+              <h4>{{ pathway.title }}</h4>
+              <div class="para">
+                <p>{{ pathway.description }}</p>
+              </div>
+              <div class="blog-bottom justify-content-center">
+                <button class="btn blog-btn">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="section-heading">
+        <h1>What Clients Say</h1>
+      </div>
+    </div>
+    <div
+      id="testimonialCarousal"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <ng-container *ngFor="let testimonial of testimonials; let i = index">
+          <div
+            class="carousel-item"
+            [ngClass]="i === 0 ? 'active' : ''"
+            data-bs-interval="4000"
+          >
+            <!-- <img [src]="banner" class="d-block w-100" alt="banner" /> -->
+            <div class="container">
+              <div class="row">
+                <ng-container *ngFor="let item of testimonial">
+                  <div class="col-md-4">
+                    <div class="testimonial-box">
+                      <div class="testimonial-image mb-3">
+                        <img [src]="item.img" alt="" />
+                      </div>
+                      <div class="testimonial-content">
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#testimonialCarousal"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#testimonialCarousal"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="best-college">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="content">
+          <h2>BEST COLLEGES AND UNIVERSITIES</h2>
+          <p>
+            We always recommend best colleges and universities for IELTS cleared
+            students. Which will help them to make their carreer in their
+            selected countries. Some of the colleges & Universities are given
+            below.
+          </p>
+          <button class="btn custom-btn" routerLink="/colleges">
+            More Colleges
+          </button>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</section>
+
+<section class="blogs">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="section-heading">
+        <h1>Latest Blogs</h1>
+      </div>
+    </div>
+    <div class="row">
+      <ng-container *ngFor="let blog of blogs;let i = index;">
+        <div class="col-md-4">
+          <div class="blog my-5">
+            <div class="blog-img">
+              <img [src]="pathways[i].img" alt="" />
+            </div>
+            <div class="blog-content">
+              <h4>{{ blog.title }}</h4>
+              <div class="para">
+                <p>{{ blog.description }}</p>
+              </div>
+              <div class="blog-bottom">
+                <button class="btn blog-btn">Read More</button>
+                <p>{{ blog.author }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
