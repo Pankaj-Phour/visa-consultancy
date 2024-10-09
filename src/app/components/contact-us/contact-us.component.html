@@ -1,0 +1,51 @@
+<section class="title-section">
+  <div class="container">
+    <div class="row">
+      <div class="heading">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-us">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-6">
+        <div class="img-container">
+          <img src="assets/images/demo.svg" alt="" />
+        </div>
+      </div>
+      <!-- <div class="col-md-1"></div> -->
+      <div class="col-md-6">
+        <div class="contact-form">
+          <form action="" [formGroup]="contactForm">
+            <div class="mb-4">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name" />
+            </div>
+            <div class="mb-4">
+              <label for="Phone" class="form-label">Phone</label>
+              <input type="number" class="form-control" id="Phone" placeholder="Phone" formControlName="number" />
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                formControlName="email" />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" name="message" id="message" placeholder="Message"
+                formControlName="query"></textarea>
+            </div>
+            <div class="submit">
+              <button class="btn btn-primary" (click)="submitContactForm()">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

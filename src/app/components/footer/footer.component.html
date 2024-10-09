@@ -1,0 +1,60 @@
+<section class="footer mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer-content">
+          <h4>About</h4>
+          <p>
+            Visa Guru Immigration operates entirely online, providing expert
+            immigration and visa services globally. Our comprehensive platform
+            offers PTE training, study visa processing, PR pathway assistance,
+            work visa processing, and personalized visa counseling. With a
+            commitment to excellence, Visa Guru Immigration helps clients
+            achieve their dreams of studying, working, and settling abroad. Our
+            expertise ensures a high success rate in obtaining the desired
+            outcomes.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="footer-content">
+          <h4>Study Abroad</h4>
+          <ul>
+            <ng-container *ngFor="let footerLink of footerLinks">
+              <li [routerLink]="[footerLink.link]">
+                <p>{{ footerLink.title }}</p>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+
+      <div class="col-md-3">
+        <div class="footer-content">
+          <h4>Visa Guru Immigration (Online Platform)</h4>
+          <p>
+            <span class="me-2"><i class="fa fa-phone"></i></span>+91 8901089381
+          </p>
+          <p>
+            <span class="me-2"><i class="fa fa-envelope"></i></span>admission@visasguruimmigration.com
+          </p>
+          <ul class="social">
+            <li>
+              <a href="" class="txt"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/visaguru_immigration?igsh=MXJjYTA5MjF5ejEzOQ==" target="_blank"
+                class="txt"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://x.com/SahilSharm43910?t=C3LcHWTlawUW59pqjK3UTA&s=08" target="_blank" class="txt"><i
+                  class="fa-brands fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

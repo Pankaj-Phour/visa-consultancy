@@ -1,0 +1,185 @@
+<nav class="navbar navbar-expand-lg top-navbar">
+  <div class="container">
+    <a class="navbar-brand txt" style="flex: 1" href="#">Welcome to Visa Guru Immigration</a>
+    <ul class="navbar-nav navbar-nav-top me-auto mb-2 mb-lg-0">
+      <li>
+        <i class="fa fa-phone icon"></i>
+        <a href="tel:+918901089381" class="txt"> +91 8901089381 </a>
+      </li>
+      <li>
+        <i class="fa fa-envelope icon"></i>
+        <a href="mailto:info@spearheadeducation.com" class="txt">admission@visasguruimmigration.com</a>
+      </li>
+      <li>
+        <ul class="social">
+          <li>
+            <a href="" class="txt"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/visaguru_immigration?igsh=MXJjYTA5MjF5ejEzOQ==" target="_blank"
+              class="txt"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://x.com/SahilSharm43910?t=C3LcHWTlawUW59pqjK3UTA&s=08" target="_blank" class="txt"><i
+                class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="logo-section">
+        <div class="logo-area">
+          <img src="assets/images/mainLogo.jpeg" alt="" />
+        </div>
+        <div class="enquiry-area">
+          <ul>
+            <li data-bs-toggle="modal" data-bs-target="#bandScore">
+              <i></i>
+              <p>BAND CALCULATOR</p>
+            </li>
+            <li data-bs-toggle="modal" data-bs-target="#contactUs">
+              <i></i>
+              <p>REQUEST A CALL BACK</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <!-- <a class="navbar-brand" routerLink="/">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <ng-container *ngFor="let link of links; let i = index">
+          <ng-container *ngIf="i !== links.length - 1">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="[link.link]" *ngIf="i < 1 || i > 3">{{ link.title }}</a>
+
+              <div class="dropdown" *ngIf="i == 1 || i == 2 || i == 3">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  {{ link.title }}
+                </a>
+
+                <ul class="dropdown-menu" *ngIf="i == 1">
+                  <ng-container *ngFor="let whyUsLink of whyUsLinks">
+                    <li>
+                      <a class="dropdown-item" (click)="getWhyUsType(whyUsLink.link)">{{ whyUsLink.title }}</a>
+                    </li>
+                  </ng-container>
+                </ul>
+
+                <ul class="dropdown-menu" *ngIf="i == 2">
+                  <ng-container *ngFor="let ieltsLink of ieltsLinks">
+                    <li>
+                      <a class="dropdown-item" (click)="getIeltsType(ieltsLink.link)">{{ ieltsLink.title }}</a>
+                    </li>
+                  </ng-container>
+                </ul>
+
+                <ul class="dropdown-menu" *ngIf="i == 3">
+                  <ng-container *ngFor="let studyLink of studyLinks">
+                    <li>
+                      <a class="dropdown-item" [routerLink]="studyLink.link">{{
+                        studyLink.title
+                        }}</a>
+                    </li>
+                  </ng-container>
+                </ul>
+              </div>
+            </li>
+          </ng-container>
+
+          <ng-container *ngIf="i === links.length - 1">
+            <li class="nav-item">
+              <button class="btn login-btn" [routerLink]="[link.link]">
+                {{ link.title }}
+              </button>
+            </li>
+          </ng-container>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Modal For Band Calculator -->
+
+<!-- Modal -->
+<div class="modal fade" id="bandScore" tabindex="-1" aria-labelledby="bandScoreLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="bandScoreLabel">IELTS Band Score Calculator</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="image-area">
+              <img src="assets/images/band.svg" alt="band">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="table-area">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>IELTS Module</th>
+                    <th>Raw Score /40</th>
+                    <th>IELTS Band</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Listening (out of 40)</td>
+                    <td><input type="number" class="form-control"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>General Reading (out of 40)</td>
+                    <td><input type="number" class="form-control"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Academic Reading (out of 40)</td>
+                    <td><input type="number" class="form-control"></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="contactUs" tabindex="-1" aria-labelledby="contactUsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <app-contact-us></app-contact-us>
+      </div>
+    </div>
+  </div>
+</div>
