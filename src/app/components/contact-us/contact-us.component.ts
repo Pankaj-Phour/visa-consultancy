@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactUsComponent implements OnInit {
 
   contactForm: FormGroup
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private api:ApiService) {
     this.validation();
   }
 
@@ -19,15 +20,25 @@ export class ContactUsComponent implements OnInit {
   validation() {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      number: ['', Validators.required],
+      contact: ['', Validators.required],
       email: ['', Validators.required],
-      query: ['', Validators.required],
+      message: ['', Validators.required],
     })
   }
 
-  submitContactForm() {
-    if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-    }
+  submit(){
+      this.api.clientData('/contact',this.contactForm.value).subscribe((next:any)=>{
+        console.log("response from api",next);
+      })
+      setTimeout(() => {
+        // this.api.obNotify({
+        //   start:true,
+        //   code:200,
+        //   status:'success',
+        //   message:'Details Submitted Successfully'
+        // })
+        this.contactForm.reset();
+        
+      }, 1500);
   }
 }

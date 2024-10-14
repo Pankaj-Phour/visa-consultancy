@@ -1,11 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   footerLinks = [
     {
@@ -169,5 +171,9 @@ export class ApiService {
       ]
     }
   ];
+
+  clientData(endpoint:string,params:any){
+    return this.http.post(environment.Url + endpoint,params)
+  }
 
 }

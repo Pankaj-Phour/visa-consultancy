@@ -16,4 +16,16 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  contact(index:any){
+    if(index == 0){
+      window.open(`tel:+91 8901089381`,"_blank")
+    }
+    else if(index == 1){
+      window.open("mailTo:admission@visasguruimmigration.com","_blank")
+    }
+    else if(index == 2){
+      window.open("http://wa.me/918901089381","_blank")
+    }
+  }
+
 }
