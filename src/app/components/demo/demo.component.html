@@ -38,7 +38,7 @@
                 class="form-control"
                 id="Phone"
                 placeholder="Phone"
-                formControlName="number"
+                formControlName="contact"
               />
             </div>
             <div class="mb-4">
@@ -59,7 +59,7 @@
                 class="form-select"
                 id="select"
                 aria-label="Default select example"
-                formControlName="queryType"
+                formControlName="message"
               >
                 <option selected disabled>Select Option</option>
                 <option value="Free Demo Booking">Free Demo Booking</option>
@@ -72,7 +72,7 @@
               </select>
             </div>
             <div class="submit">
-              <button class="btn btn-primary" (click)="submitDemoForm()">
+              <button class="btn btn-primary" (click)="submit()" [disabled]="demoForm.invalid">
                 Submit
               </button>
             </div>
