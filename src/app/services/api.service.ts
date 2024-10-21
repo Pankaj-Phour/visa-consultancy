@@ -47,7 +47,7 @@ export class ApiService {
   blogs = [
     {
       img: 'assets/images/blog1.jpg',
-      title: 'What makes Spearhead the best IELTS institute in Mohali',
+      title: '**Steps to Prevent Your Study Visa from Rejection**',
       description: 'The popularity of the IELTS exam has skyrocketed in the past decade. As plenty of students are opting for this exam, many institutes started giving IELTS coaching in Mohali. Talking about Punjab only, there are hundreds of institutes claiming to provide the best IELTS coaching. While some are genuinely good, a few are only there to astray students. The question now arises, how can one choose the best IELTS institute in Mohali out of the pool of institutes in every nook and corner?',
       author: 'By Admin'
     },
@@ -76,7 +76,7 @@ export class ApiService {
       author: 'By Admin'
     },
     {
-      img: 'assets/images/blog6.png',
+      img: 'assets/images/blog6.jpg',
       title: 'Things to keep in Mind before coming to Canada as an International Student',
       description: 'coming to Canada on a study visa, a student must be aware of the taxation system of Canada and be well aware of the related terminology which he is going to strike almost every day while making monetary transactions or dealings. Another thing that he should be aware of is the timing of taxation, because after the due date he may have to face penalties. ',
       author: 'By Admin'

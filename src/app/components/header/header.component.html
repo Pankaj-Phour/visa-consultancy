@@ -2,13 +2,13 @@
   <div class="container">
     <a class="navbar-brand txt" style="flex: 1" href="#">Welcome to Visa Guru Immigration</a>
     <ul class="navbar-nav navbar-nav-top me-auto mb-2 mb-lg-0">
-      <li>
+      <li (click)="contact(0)" style="cursor: pointer;">
         <i class="fa fa-phone icon"></i>
-        <a href="tel:+918901089381" class="txt"> +91 8901089381 </a>
+        <a class="txt"> +91 8901089381 </a>
       </li>
-      <li>
+      <li (click)="contact(1)">
         <i class="fa fa-envelope icon"></i>
-        <a href="mailto:info@spearheadeducation.com" class="txt">{{'admission@visasguruimmigration.com'}}</a>
+        <a class="txt">{{'admission@visasguruimmigration.com'}}</a>
       </li>
       <li>
         <ul class="social">
@@ -119,7 +119,7 @@
 <!-- Modal For Band Calculator -->
 
 <!-- Modal -->
-<div class="modal fade" id="bandScore" tabindex="-1" aria-labelledby="bandScoreLabel" aria-hidden="true">
+<div class="modal fade" id="bandScore" tabindex="-1" aria-labelledby="bandScoreLabel" aria-hidden="true" [formGroup]="bandForm">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -146,18 +146,24 @@
                 <tbody>
                   <tr>
                     <td>Listening (out of 40)</td>
-                    <td><input type="number" class="form-control"></td>
-                    <td></td>
+                    <td><input type="number" class="form-control" formControlName="listening"></td>
+                    <td>
+                      <span *ngIf="bandValue">{{bandValues.listening[bandValue.listening]}}</span>
+                    </td>
                   </tr>
                   <tr>
                     <td>General Reading (out of 40)</td>
-                    <td><input type="number" class="form-control"></td>
-                    <td></td>
+                    <td><input type="number" class="form-control" formControlName="general_reading"></td>
+                    <td>
+                      <span *ngIf="bandValue">{{bandValues.general_reading[bandValue.general_reading]}}</span>
+                    </td>
                   </tr>
                   <tr>
                     <td>Academic Reading (out of 40)</td>
-                    <td><input type="number" class="form-control"></td>
-                    <td></td>
+                    <td><input type="number" class="form-control" formControlName="academic_reading"></td>
+                    <td>
+                      <span *ngIf="bandValue">{{bandValues.academic_reading[bandValue.academic_reading]}}</span>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -166,8 +172,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" [disabled]="bandForm.invalid" [ngStyle]="{cursor: bandForm.invalid ? 'not-allowed !important' : 'pointer'}" (click)="calculateBand()">Calculate</button>
       </div>
     </div>
   </div>
